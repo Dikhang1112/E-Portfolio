@@ -11,24 +11,21 @@
     try { localStorage.setItem("theme", next); } catch {}
   });
 
-  // Mobile menu
+  // Mobile menu (sidebar slides in)
   const burger = document.getElementById("burger");
-  const links = document.getElementById("navLinks");
-  burger.addEventListener("click", () => {
-    const open = links.classList.toggle("open");
-    burger.setAttribute("aria-expanded", open);
-  });
-  links.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
-    links.classList.remove("open");
-    burger.setAttribute("aria-expanded", false);
-  }));
-
-  // Nav border on scroll + active link
   const nav = document.getElementById("nav");
+  const links = document.getElementById("navLinks");
+  const setOpen = open => {
+    nav.classList.toggle("open", open);
+    burger.setAttribute("aria-expanded", open);
+  };
+  burger.addEventListener("click", () => setOpen(!nav.classList.contains("open")));
+  links.querySelectorAll("a").forEach(a => a.addEventListener("click", () => setOpen(false)));
+
+  // Active link on scroll
   const sections = [...document.querySelectorAll("main section[id]")];
   const navAnchors = [...links.querySelectorAll("a")];
   const onScroll = () => {
-    nav.classList.toggle("scrolled", window.scrollY > 10);
     const y = window.scrollY + 120;
     const current = sections.filter(s => s.offsetTop <= y).pop();
     navAnchors.forEach(a => a.classList.toggle("active", current && a.getAttribute("href") === "#" + current.id));
