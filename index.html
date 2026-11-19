@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Duong Vo Duy Khang | Software Engineer</title>
+  <meta name="description" content="Portfolio of Duong Vo Duy Khang, Java/Spring Boot backend engineer building event-driven services and LLM integrations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#home" class="nav__logo">DK<span>.</span></a>
+      <nav class="nav__links" id="navLinks" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">◐</button>
+        <button class="icon-btn nav__burger" id="burger" aria-label="Open menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero__inner">
+        <p class="eyebrow reveal">Hello, I'm</p>
+        <h1 class="hero__name reveal">Duong Vo Duy Khang</h1>
+        <p class="hero__role reveal">
+          <span id="typed"></span><span class="cursor">|</span>
+        </p>
+        <p class="hero__lead reveal">
+          Backend engineer focused on <strong>Java / Spring Boot</strong>. I build event-driven
+          services, integrate LLMs with resilience patterns, and write clean, tested code.
+        </p>
+        <div class="hero__cta reveal">
+          <a href="#contact" class="btn btn--primary">Get in touch</a>
+          <a href="#experience" class="btn btn--ghost">View experience</a>
+        </div>
+        <ul class="hero__social reveal">
+          <li><a href="https://github.com/Dikhang1112" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://linkedin.com/in/duy-khang-717325326" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="mailto:duykhanggt5@gmail.com">Email</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section__title reveal">About me</h2>
+        <div class="about reveal">
+          <p>
+            I'm a Software Engineer with about one year of experience (including an internship),
+            based in Ho Chi Minh City. I enjoy designing backend systems that stay reliable under load:
+            asynchronous pipelines with Spring Integration and RabbitMQ, and LLM features built on
+            Spring AI with rate limiting and resilience patterns.
+          </p>
+          <p>
+            I care about maintainable code: design patterns, Clean Code, and unit tests that actually
+            protect behavior.
+          </p>
+        </div>
+        <div class="stats">
+          <div class="stat reveal"><span class="stat__num" data-count="85" data-suffix="%+">0</span><span class="stat__label">Test coverage</span></div>
+          <div class="stat reveal"><span class="stat__num" data-count="60" data-suffix="%+">0</span><span class="stat__label">Faster MongoDB queries</span></div>
+          <div class="stat reveal"><span class="stat__num" data-count="1" data-suffix="yr">0</span><span class="stat__label">Industry experience</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section section--alt" id="experience">
+      <div class="container">
+        <h2 class="section__title reveal">Experience</h2>
+        <div class="timeline">
+
+          <article class="job reveal">
+            <header class="job__head">
+              <div>
+                <h3>Software Engineer</h3>
+                <p class="job__company">bbv Vietnam · Ho Chi Minh City</p>
+              </div>
+              <span class="job__date">Jun 2026 – Present</span>
+            </header>
+            <p class="job__project">AI@HR Internal Platform · Fullstack Developer</p>
+            <ul>
+              <li><strong>Event-driven CV ingestion:</strong> replaced manual intake with an automated pipeline using Spring Integration (file watchers, channels, gateways) and RabbitMQ via Spring AMQP, decoupling stages into async workers.</li>
+              <li><strong>LLM rate limiting &amp; resilience:</strong> fixed HTTP 429 errors from concurrent Spring AI requests with semaphore concurrency control, an RPM-aware limiter and API key rotation.</li>
+              <li><strong>Design patterns &amp; architecture:</strong> applied Strategy and Abstract Factory to decouple provider-specific logic, so strategies switch per client request.</li>
+              <li><strong>Test-driven development:</strong> covered JD parsing, CV evaluation and async error handling with JUnit 5 and Mockito, reaching 85%+ coverage.</li>
+              <li><strong>CI/CD &amp; security:</strong> GitHub Actions workflows with SonarQube static analysis and Trivy dependency/container scanning.</li>
+            </ul>
+            <div class="tags">
+              <span>Spring Boot</span><span>Spring AI</span><span>Spring Integration</span><span>RabbitMQ</span><span>JUnit 5</span><span>Mockito</span><span>GitHub Actions</span><span>SonarQube</span><span>Trivy</span>
+            </div>
+          </article>
+
+          <article class="job reveal">
+            <header class="job__head">
+              <div>
+                <h3>Software Developer Intern</h3>
+                <p class="job__company">South Telecom · Ho Chi Minh City</p>
+              </div>
+              <span class="job__date">Sep 2025 – Feb 2026</span>
+            </header>
+            <p class="job__project">Vietjack Customer Service Platform · Fullstack Developer</p>
+            <ul>
+              <li><strong>Database optimization:</strong> cut MongoDB query time by over 60% by rewriting aggregations on a high-traffic CRM with millions of records (PHP / CodeIgniter).</li>
+              <li><strong>Frontend development:</strong> built reusable data tables, charts and matrix visualizations with Kendo UI, jQuery and Bootstrap 5.</li>
+              <li><strong>Agile &amp; code quality:</strong> delivered CRM features in Agile/Scrum teams following the HMVC pattern and PSR standards.</li>
+            </ul>
+            <div class="tags">
+              <span>PHP</span><span>CodeIgniter</span><span>MongoDB</span><span>Kendo UI</span><span>jQuery</span><span>Bootstrap 5</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <h2 class="section__title reveal">Technical skills</h2>
+        <div class="skills">
+          <div class="card reveal"><h3>Backend</h3><div class="tags"><span>Java Core</span><span>Spring Boot</span><span>Spring Data JPA</span><span>Hibernate</span><span>Spring Integration</span></div></div>
+          <div class="card reveal"><h3>Frontend</h3><div class="tags"><span>JavaScript</span><span>React</span><span>jQuery</span><span>HTML &amp; CSS</span></div></div>
+          <div class="card reveal"><h3>Message broker</h3><div class="tags"><span>RabbitMQ</span><span>Spring AMQP</span></div></div>
+          <div class="card reveal"><h3>Database</h3><div class="tags"><span>PostgreSQL</span><span>MongoDB</span></div></div>
+          <div class="card reveal"><h3>Architecture &amp; concepts</h3><div class="tags"><span>RESTful APIs</span><span>OOP</span><span>Design Patterns</span><span>Microservices</span><span>Agile / Scrum</span><span>CI/CD</span><span>Event-Driven</span><span>TDD</span></div></div>
+          <div class="card reveal"><h3>Tools &amp; OS</h3><div class="tags"><span>Git</span><span>Docker</span><span>Postman</span><span>Jira</span><span>Linux (Ubuntu)</span><span>AI Coding Assistants</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section section--alt" id="education">
+      <div class="container">
+        <h2 class="section__title reveal">Education &amp; achievements</h2>
+        <div class="edu reveal">
+          <div class="job__head">
+            <div>
+              <h3>Ho Chi Minh City Open University</h3>
+              <p class="job__company">Computer Science</p>
+            </div>
+            <span class="job__date">Expected Nov 2026</span>
+          </div>
+          <ul class="achievements">
+            <li>Merit-Based Academic Scholarship (2025/2026)</li>
+            <li>Consolation Prize, School Research Contest (2024/2025)</li>
+            <li>Consolation Prize, School Programming Contest (2025)</li>
+            <li>TOEIC 610 (2025)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container contact reveal">
+        <h2 class="section__title">Let's work together</h2>
+        <p>I'm open to backend and fullstack opportunities. The fastest way to reach me is email.</p>
+        <a class="btn btn--primary" href="mailto:duykhanggt5@gmail.com">duykhanggt5@gmail.com</a>
+        <ul class="hero__social">
+          <li><a href="https://github.com/Dikhang1112" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://linkedin.com/in/duy-khang-717325326" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© <span id="year"></span> Duong Vo Duy Khang. Built with HTML, CSS and JavaScript.</div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
