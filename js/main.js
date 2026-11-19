@@ -22,6 +22,21 @@
   burger.addEventListener("click", () => setOpen(!nav.classList.contains("open")));
   links.querySelectorAll("a").forEach(a => a.addEventListener("click", () => setOpen(false)));
 
+  // Collapse / expand sidebar (desktop), remembered
+  const collapseBtn = document.getElementById("collapseBtn");
+  const applyCollapsed = c => {
+    document.body.classList.toggle("sidebar-collapsed", c);
+    collapseBtn.setAttribute("aria-expanded", !c);
+    collapseBtn.setAttribute("aria-label", c ? "Expand sidebar" : "Collapse sidebar");
+  };
+  const savedC = (() => { try { return localStorage.getItem("sidebarCollapsed") === "1"; } catch { return false; } })();
+  applyCollapsed(savedC);
+  collapseBtn.addEventListener("click", () => {
+    const c = !document.body.classList.contains("sidebar-collapsed");
+    applyCollapsed(c);
+    try { localStorage.setItem("sidebarCollapsed", c ? "1" : "0"); } catch {}
+  });
+
   // Active link on scroll
   const sections = [...document.querySelectorAll("main section[id]")];
   const navAnchors = [...links.querySelectorAll("a")];

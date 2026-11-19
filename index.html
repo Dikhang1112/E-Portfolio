@@ -8,23 +8,27 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=3" />
 </head>
 <body>
   <header class="topbar">
-    <a href="#home" class="nav__logo">DK<span>.</span></a>
     <button class="icon-btn" id="burger" aria-label="Open menu" aria-expanded="false">☰</button>
   </header>
 
   <aside class="sidebar" id="nav">
-    <a href="#home" class="nav__logo">DK<span>.</span></a>
+    <div class="sidebar__top">
+      <a href="#home" class="nav__logo">DK<span>.</span></a>
+      <button class="icon-btn" id="collapseBtn" aria-label="Collapse sidebar" aria-expanded="true">
+        <svg class="ico chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      </button>
+    </div>
     <nav class="nav__links" id="navLinks" aria-label="Main">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
+      <a href="#home" title="Home"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg><span class="label">Home</span></a>
+      <a href="#about" title="About"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg><span class="label">About</span></a>
+      <a href="#experience" title="Experience"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V4h6v3"/></svg><span class="label">Experience</span></a>
+      <a href="#skills" title="Skills"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 8l-5 4 5 4"/><path d="M16 8l5 4-5 4"/><path d="M14 5l-4 14"/></svg><span class="label">Skills</span></a>
+      <a href="#education" title="Education"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg><span class="label">Education</span></a>
+      <a href="#contact" title="Contact"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span class="label">Contact</span></a>
     </nav>
     <button class="icon-btn sidebar__theme" id="themeToggle" aria-label="Toggle theme">◐</button>
   </aside>
@@ -183,6 +187,6 @@
     <div class="container">© <span id="year"></span> Duong Vo Duy Khang. Built with HTML, CSS and JavaScript.</div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=3"></script>
 </body>
 </html>
